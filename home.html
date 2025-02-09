@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Natasha Tran, Computer Science, Software Engineer, UC San Diego">
+    <title>Natasha Tran</title>
+    <!-- defines relationship btwn current doc and an external resource (rel is relationship, href is the url of the linked doc) -->
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        #about-me-images div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        img {
+            border: 1px solid black; /* this is border-color and border-style combined */
+        }
+    </style>
+</head>
+<body>
+    
+    <hello-world></hello-world>
+    <script>
+        // Define the custom element
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super(); // Call the parent constructor
+                console.log("Hello World!"); // Log to the console
+            }
+        }
+
+        // Register the custom element
+        customElements.define('hello-world', HelloWorld);
+    </script>
+    <header>
+        <div>
+            <span>NT</span> <!-- span here b/c it will be inline to the navbar once we do CSS-->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+        <button>Toggle Theme</button>
+    </header>
+    <main>
+        <noscript>
+            <p>JavaScript is disabled in your browser. You should enable JS for this site to work!</p>
+        </noscript>
+        <h1> Natasha Tran</h1>
+        <picture> <!-- the logic doesn't really work, maybe cause the 2nd image is a heic?-->
+            <source media="(min-width:650px)" srcset="doctor.jpg">
+            <source media="(min-width:465px)" srcset="babynat.heic">
+            <img src="doctor.jpg" alt="Natasha in a lab coat" width="200"> <!-- this sizes the image so it;s not huge-->
+        </picture> <!-- definitely change this paragraph later lol-->
+        <p>
+            I am <b>Natasha Tran</b>, a <del><abbr title="FaceBook, Amazon, Apple, Netflix, Google">FAANG</abbr> engineer</del> <ins>college third-year student</ins>. I am pursuing a career in the computer science field.
+            <br> <br>
+            I am attending the University of Califonia, San Diego to obtain my BS in Computer Science, with prospects of becoming a Software Engineer or a Software Developer.
+            <br> <br>
+            I am always looking for new opportunities for growth and ways to solve problems, which is why I am interested in CS! I hope to participate in the ever-growing development of technology through my ambitions.
+        </p>
+        <blockquote>
+            "Chase my dreams, get it by any means"
+            <cite>— Bladee</cite>
+        </blockquote>
+        
+        <address>
+            <a href="https://www.linkedin.com/in/nattran/">Linkedin</a> | <a href="https://github.com/FaZeDrug">GitHub</a> | <a href="resume.pdf">Resume</a>
+            <br>
+            <a href="natashamarietran@gmail.com">natashamarietran@gmail.com</a>
+        </address>
+
+        <section id="about-me-images">
+            <!-- <div style="display: flex; justify-content: center; gap: 20px;"> -->
+            <h2>Moments</h2>
+            <div>
+                <figure>
+                    <img src="robloxgrown.jpg" alt="Natasha playing Roblox, looking back at camera" width="200" height="200">
+                    <figcaption>Computer lover</figcaption>
+                </figure>
+                <figure>
+                    <img src="natgym.jpg" alt="Mirror selfie of Natasha flexing arm at gym" width="200" height="200">
+                    <figcaption>Gym lover</figcaption>
+                </figure>
+                <figure>
+                    <img src="glasses.jpg" alt="Natasha posing for selfie, wearing glasses" width="200" height="200">
+                    <figcaption>Fake glasses wearer</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; <em><strong> 2025 Natasha Tran. All rights reserved.</strong></em></p>
+    </footer>
+</body>
+</html>
