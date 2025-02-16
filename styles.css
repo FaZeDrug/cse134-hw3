@@ -1,0 +1,40 @@
+@font-face { /* this loads the font from google itself*/
+    font-family: "Inter";
+    src: url("https://fonts.gstatic.com/s/inter/v3/1cX3aA2DNXlZ5zE7G1l.woff2") format("woff2");
+}  
+body { /* the times new roman and san serif are the fallback fonts*/
+    font-family: "Inter", "Times New Roman", sans-serif; 
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 185px; 
+}
+
+nav a { /* i think this refers to the navbar's links */
+    font-size: 15px; /* changes the font size of the words in navbar */
+    text-decoration: none; /* removes the default underline link*/
+    color: black; /* changes text color to black (we dont want it blue)*/
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* change spacing between navbar words */
+}
+
+li { /* list elements (aka words of navbar) will be inline instead of a block of links */
+    display: inline;
+    align-items: end;
+}
+
+
+
+
+
+  
+  
