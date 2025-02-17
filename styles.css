@@ -1,16 +1,24 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
 @font-face { /* this loads the font from google itself*/
     font-family: "Inter";
     src: url("https://fonts.gstatic.com/s/inter/v3/1cX3aA2DNXlZ5zE7G1l.woff2") format("woff2");
-}  
+} 
+
 body { /* the times new roman and san serif are the fallback fonts*/
     font-family: "Inter", "Times New Roman", sans-serif; 
+
 }
 
 nav{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 185px; 
+    padding: 30px 185px;
+    border-bottom: 2px solid black; /* black line below navbar */
+    padding-bottom: 15px; /* the space between line and text */
 }
 
 nav a { /* i think this refers to the navbar's links */
@@ -32,9 +40,11 @@ li { /* list elements (aka words of navbar) will be inline instead of a block of
     align-items: end;
 }
 
+h1 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 48px; /* Adjust size to match Figma */
+    font-weight: 400; /* Ensure correct weight */
+}
 
 
 
-
-  
-  
