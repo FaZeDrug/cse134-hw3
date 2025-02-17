@@ -68,7 +68,7 @@ h1 { /* this is setting the h1 font for my name!! */
 
 /* left column for name, blurb, and links */
 .about-text {
-    max-width: 500px; /* Prevents text from stretching */
+    max-width: 500px; /* prevents text from stretching too  much */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +89,11 @@ h1 {
     margin-bottom: 15px;
 }
 
+blockquote{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* the styling for linked, git, resume, and email */
 .about-text address {
     margin-top: 10px;
@@ -105,13 +110,50 @@ h1 {
 
 .about-text .email {
     text-align: center;
-    display: block;
 }
 
 /* right column for the big image of me*/
 .about-image img {
-    width: 100px; /* image size */
+    width: 250px; /* image size */
     height: auto;
     border-radius: 10px;
     border: 1px solid black; 
+}
+
+#moments-images h2 { /* the # selects an id */
+    text-align: center; /* Centers the heading */
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#moments-images div {
+    display: flex;
+    justify-content: center;
+    gap: 150px; /* Adjust the spacing between images */
+    flex-wrap: wrap; /* Ensures images wrap properly if needed */
+}
+
+figure {
+    text-align: center; /* centing both image and caption */    
+}
+
+figure img {
+    width: 250px;  /* fixed width */
+    height: 250px; /* fixed height */
+    object-fit: cover; /* gets rid of squishing image issue */
+    border-radius: 10px; 
+}
+
+
+figcaption {
+    text-align: center; 
+    display: block; 
+    margin-top: 5px; /* spacing between image and caption */
+}
+
+footer{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
 }
