@@ -40,11 +40,78 @@ li { /* list elements (aka words of navbar) will be inline instead of a block of
     align-items: end;
 }
 
-h1 {
+h1 { /* this is setting the h1 font for my name!! */
     font-family: 'Pinyon Script', cursive;
+    align-items: center;
     font-size: 48px; /* Adjust size to match Figma */
     font-weight: 400; /* Ensure correct weight */
 }
 
+/* new below*/
+
+/* centers the pinyon text of my name */
+.about-text h1 { 
+    text-align: center; /* Center the name */
+    width: 100%; /* Full width to ensure centering */
+    font-size: 65px;
+}
+
+/* the main container to arrange elements in two columns (the left text and right pic)*/
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /* Adjust width as needed */
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+}
+
+/* left column for name, blurb, and links */
+.about-text {
+    max-width: 500px; /* Prevents text from stretching */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
+/* this is the pinyon script of my namet */
+h1 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* spacing for the about blurb */
+.about-text p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* the styling for linked, git, resume, and email */
+.about-text address {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.about-text address a {
+    text-decoration: none;
+    color: black;
+    /* margin-right: 10px; this sucks dont add this line*/
+    margin-bottom: auto;
+}
+
+.about-text .email {
+    text-align: center;
+    display: block;
+}
+
+/* right column for the big image of me*/
+.about-image img {
+    width: 100px; /* image size */
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid black; 
+}
