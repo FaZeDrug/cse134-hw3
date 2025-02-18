@@ -9,7 +9,18 @@
 
 body { /* the times new roman and san serif are the fallback fonts*/
     font-family: "Inter", "Times New Roman", sans-serif; 
+}
 
+:root { /* making css vars*/
+    --text-color: black;
+    --background-color: white; /* be sure to use this variable somewhere in order to successfuly do the dark mode ting */
+    --border-color: black;
+}
+
+.dark-mode {
+    --background-color: black;
+    --text-color: white;
+    --border-color: white;
 }
 
 nav{
@@ -17,14 +28,18 @@ nav{
     justify-content: flex-end;
     align-items: center;
     padding: 30px 185px;
-    border-bottom: 2px solid black; /* black line below navbar */
+    border-bottom: 2px solid var(--border-color); /* black line below navbar */
     padding-bottom: 15px; /* the space between line and text */
+}
+
+nav .logo{ /*styling NT only*/
+    color: var( --text-color); /*ensures the text is a certain color, idk what happened here */
 }
 
 nav a { /* i think this refers to the navbar's links */
     font-size: 15px; /* changes the font size of the words in navbar */
     text-decoration: none; /* removes the default underline link*/
-    color: black; /* changes text color to black (we dont want it blue)*/
+    color: var( --text-color);
 }
 
 ul {
@@ -47,12 +62,18 @@ h1 { /* this is setting the h1 font for my name!! */
     font-weight: 400; /* Ensure correct weight */
 }
 
-/* new below*/
+h1 { /* this is the pinyon script of my namet */
+    font-family: 'Pinyon Script', cursive;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var( --text-color);
+}
 
-/* centers the pinyon text of my name */
+/* centers the pinyon text of my name and sttyles*/
 .about-text h1 { 
-    text-align: center; /* Center the name */
-    width: 100%; /* Full width to ensure centering */
+    text-align: center; /* centering my pinyon */
+    width: 100%; /* the full width is ensuringcentering */
     font-size: 65px;
 }
 
@@ -61,8 +82,8 @@ h1 { /* this is setting the h1 font for my name!! */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px; /* Adjust width as needed */
-    margin: 50px auto; /* Center the container */
+    max-width: 1000px; /* adjust width with whatever */
+    margin: 50px auto; /* centers container, look into it */
     padding: 20px;
 }
 
@@ -75,23 +96,17 @@ h1 { /* this is setting the h1 font for my name!! */
 }
 
 
-/* this is the pinyon script of my namet */
-h1 {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 48px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
 /* spacing for the about blurb */
 .about-text p {
     font-size: 15px;
     margin-bottom: 15px;
+    color: var( --text-color);
 }
 
 blockquote{
     margin-top: 10px;
     margin-bottom: 10px;
+    color: var( --text-color);
 }
 
 /* the styling for linked, git, resume, and email */
@@ -99,11 +114,12 @@ blockquote{
     margin-top: 10px;
     font-size: 16px;
     font-style: normal;
+    color: var( --text-color)
 }
 
 .about-text address a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     /* margin-right: 10px; this sucks dont add this line*/
     margin-bottom: auto;
 }
@@ -117,13 +133,14 @@ blockquote{
     width: 250px; /* image size */
     height: auto;
     border-radius: 10px;
-    border: 1px solid black; 
+    border: 1px solid var(--border-color); 
 }
 
 #moments-images h2 { /* the # selects an id */
     text-align: center; /* Centers the heading */
     width: 100%;
     margin-bottom: 50px;
+    color: var(--text-color);
 }
 
 #moments-images div {
@@ -141,6 +158,7 @@ figure img {
     width: 250px;  /* fixed width */
     height: 250px; /* fixed height */
     object-fit: cover; /* gets rid of squishing image issue */
+    border: 1px solid var(--border-color);
     border-radius: 10px; 
 }
 
@@ -149,6 +167,7 @@ figcaption {
     text-align: center; 
     display: block; 
     margin-top: 5px; /* spacing between image and caption */
+    color: var(--text-color);
 }
 
 footer{
@@ -156,4 +175,5 @@ footer{
     margin-bottom: 20px;
     font-size: 15px;
     text-align: center;
+    color: var(--text-color);
 }
