@@ -8,12 +8,21 @@
 } 
 
 body { /* the times new roman and san serif are the fallback fonts*/
-    font-family: "Inter", "Times New Roman", sans-serif; 
+    font-family: "Inter", "Times New Roman", Arial, Helvetica, sans-serif; 
+
+    /* fade site in below*/
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+    }
 }
 
 html, body {
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    max-width: 100vw; /* Ensures no element exceeds the screen width */
+    overflow-x: hidden; /*this  prevents horizontal scrolling */
+    max-width: 100vw; /* this ensures no element exceeds the screen width */
 }
 
 :root { /* making css vars*/
@@ -45,7 +54,6 @@ html, body {
 }
 
 
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -66,6 +74,7 @@ nav a { /* i think this refers to the navbar's links */
     color: var( --text-color);
 
 }
+
 
 ul {
     list-style-type: none;
@@ -101,6 +110,12 @@ h1 { /* this is the pinyon script of my namet */
     text-align: center; /* centering my pinyon */
     width: 100%; /* the full width is ensuringcentering */
     font-size: 65px;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.about-text h1 {
+    opacity: 1;
 }
 
 /* the main container to arrange elements in two columns (the left text and right pic)*/
@@ -113,7 +128,7 @@ h1 { /* this is the pinyon script of my namet */
     padding: 20px;
 }
 
-/* left column for name, blurb, and links */
+/* left col for name, blurb, and links */
 .about-text {
     max-width: 500px; /* prevents text from stretching too  much */
     display: flex;
@@ -153,6 +168,8 @@ blockquote{
 .about-text .email {
     text-align: center;
 }
+
+
 
 /* right column for the big image of me*/
 .about-image img {
@@ -203,4 +220,68 @@ footer{
     font-size: 15px;
     text-align: center;
     color: var(--text-color);
+}
+
+/* hamburger menu stuff below */
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    z-index: 100;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: 0.3s;
+    display: block;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* the mobile styles for menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--background-color);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    /* menu is shown when checked*/
+    .menu-checkbox:checked ~ .menu {
+        display: flex;
+    }
 }

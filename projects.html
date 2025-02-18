@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pjxexp.css">
     <title>Projects</title>
 </head>
 <body> 
     <header>
-        <div>
-            <span>NT</span> <!-- span here b/c it will be inline to the navbar once we do CSS-->
-        </div>
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="experiments.html">Experiments</a></li>
+            <div class="logo"> NT </div>
+
+                <!-- hamburger icon here -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+            
+            <ul class = "menu">
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="experience.html">experience</a></li>
+                <!-- <li><a href="experiments.html">experiments</a></li> experiments is kinda bad -->
             </ul>
         </nav>
-        <button>Toggle Theme</button>
+        <!-- <button>Toggle Theme</button> -->
     </header>
     <main>
         <section>
@@ -31,7 +40,7 @@
                     <img src="ersp_symp.png" alt="Four students in front of research poster holding up completion awards" width="150" height="150">
                     <figcaption>My group presenting at ERSP symposium</figcaption>
                 </figure>
-                <div>
+                <div class ="blurb">
                     <h3><i>Parental Concerns in Roblox - Early Research Scholars Program</i></h3>
                     <ul>
                         <li>Carried out an independent research project over the course of an academic year as part of the Early Research Scholars Program, a research experience for undergraduate students in computing/engineering.</li>
@@ -50,5 +59,8 @@
         
         </section>        
     </main>
+    <footer>
+        <p>&copy; <em> 2025 Natasha Tran. All rights reserved. </em></p>
+    </footer>
 </body>
 </html>
