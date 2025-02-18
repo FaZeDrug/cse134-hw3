@@ -85,6 +85,7 @@ h1 { /* this is the pinyon script of my namet */
     max-width: 1000px; /* adjust width with whatever */
     margin: 50px auto; /* centers container, look into it */
     padding: 20px;
+    min-height: 100dvh; /* Ensures the section takes the full screen dynamically */
 }
 
 /* left column for name, blurb, and links */
