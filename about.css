@@ -107,6 +107,10 @@ nav ul { /* styling navbar ul links only, we have to do this bc there's ul in th
     text-align: left;
 }
 
+.careergoals{
+    margin-bottom:50px;
+}
+
 .archery{
     margin-bottom: 50px;
 }
@@ -151,7 +155,31 @@ nav ul { /* styling navbar ul links only, we have to do this bc there's ul in th
     gap: 30px;
 }
 
-/* the mobile styles for menu */
+/* below is the media query stuff for optimizing on mobile devices*/
+@media (max-width: 768px) {
+    .allcontainer {
+        flex-direction: column; /* stacking the left and right divs , left will go first*/
+        gap: 50px; /* the spacing between sections */
+    }
+
+    .leftside, .rightside {
+        width: 100%; /* bth sctions will take up the full width*/
+    }
+
+    .about-content {
+        flex-direction: column; /* image and text will be stacked vertically */
+        align-items: center; /* align items in center*/
+        text-align: center; /* text centered */
+    }
+
+    .about-content img {
+        width: 120px; /* slightly smaller image for mobile */
+        height: 120px;
+    }
+}
+
+
+/* the mobile styles for hamburger menu is below*/
 @media (max-width: 768px) {
     .menu {
         display: none;
