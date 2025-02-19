@@ -19,7 +19,7 @@ html, body {
 }
 
 :root { /* making css vars */
-    --text-color: rgb(0, 34, 255);
+    --text-color: black;
     --background-color: white; 
     --border-color: black;
 }
