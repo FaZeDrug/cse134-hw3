@@ -3,62 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pjxexp.css">
     <title>Experience</title>
 </head>
-<body>
+<body> 
     <header>
-        <div>
-            <span>NT</span> <!-- span here b/c it will be inline to the navbar once we do CSS-->
-        </div>
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="experiments.html">Experiments</a></li>
+            <div class="logo"> NT </div>
+
+                <!-- hamburger icon here -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+            
+            <ul class="menu">
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="experience.html">experience</a></li>
             </ul>
         </nav>
-        <button>Toggle Theme</button>
     </header>
+    
     <main>
-        <h1> Experience </h1>
+        <section>
+            <h2>EXPERIENCE</h2>
+        
+            <!-- this contains all the experiences-->
+            <div class="projects-container">
 
-        <!-- base86 -->
-        <article>
-            <figure>
-                <img src="base86.jpeg" alt="base86 company logo" width="50" height="50">
-            </figure>
-            <div>
-                <h3><i>Quality Assurance Intern @ base86</i></h3>
-                <ul>
-                    <li>Conducted comprehensive manual testing of various software applications to identify bugs, performance issues, and usability problems.</li>
-                    <li>Developed detailed test cases and testing scenarios based on functional requirements to ensure comprehensive coverage and up-to-date software</li>
-                </ul>
-                <br>
-                <p>Technologies used: ClickUp, Qase, Manual Smoke Testing</p>
-            </div>
-        </article>
+                <!-- omg amazon??
+                <article>
+                    <figure>
+                        <img src="amznlogo.jpg" alt="amazon company logo">
+                    </figure>
+                    <div class="blurb">
+                        <h3><i>Incoming SDE I Intern - Amazon</i></h3>
+                        <h1>Jun '25 - Aug '25</h1>
+                        <ul>
+                            <li>TBD LERORLEOR</li>
+                        </ul>
+                        <p>Technologies used: TBD</p>
+                    </div>
+                </article> -->
 
-        <!-- Ujima Lab -->
-        <article>
-            <figure>
-                <img src="ujimalab.png" alt="Ujima Lab" width="50" height="50">
-            </figure>
-            <div>
-                <h3><i>CSE Researcher @ Ujima Lab (UCSD)</i></h3>
-                <ul>
-                    <li>Carried out an independent research project over the course of an academic year as part of the Early Research Scholars Program, a research experience for undergraduate students in computing/engineering.</li>
-                    <li>Worked on "Parental Concerns in Children Gaming in Roblox" research paper under Professor Munyaka. Project entailed analyzing parental concerns about Roblox (posted on Reddit) to highlight the disparity of parental knowledge about Roblox.</li>
-                    <li><b>Paper accepted to IEEE ISTAS '24.</b></li>
-                </ul>
-                <br>
-                <p>
-                    <a href="https://project1.com">Publication Link</a> | <a href="https://project1.com">Poster Link</a>
-                </p>
-                <p>Technologies used: pyLDAvis, Jupyter Notebook, Git, Unsupervised Machine Learning</p>
+                <!-- base86 experience -->
+                <article>
+                    <figure>
+                        <img src="base86.jpeg" alt="base86 company logo">
+                    </figure>
+                    <div class="blurb">
+                        <h3><i>Quality Assurance Intern - base86</i></h3>
+                        <h1>Jun '24 - Aug '24</h1>
+                        <ul>
+                            <li>Conducted comprehensive manual testing of various software applications to identify bugs, performance issues, and usability problems.</li>
+                            <li>Developed detailed test cases and testing scenarios based on functional requirements to ensure comprehensive coverage and up-to-date software.</li>
+                        </ul>
+                        <p>Technologies used: ClickUp, Qase, Manual Smoke Testing</p>
+                    </div>
+                </article>
+
+                <!-- ujima lab experience -->
+                <article>
+                    <figure>
+                        <img src="ujimalab.png" alt="Ujima Lab">
+                    </figure>
+                    <div class="blurb">
+                        <h3><i>CSE Researcher - Ujima Lab (UCSD)</i></h3>
+                        <h1>Sep '23 - Jun '24</h1>
+                        <ul>
+                            <li>Carried out an independent research project over the course of an academic year as part of the Early Research Scholars Program, a research experience for undergraduate students in computing/engineering.</li>
+                            <li>Worked on "Parental Concerns in Children Gaming in Roblox" research paper under Professor Munyaka. Project entailed analyzing parental concerns about Roblox (posted on Reddit) to highlight the disparity of parental knowledge about Roblox.</li>
+                            <li><b>Paper accepted to IEEE ISTAS '24.</b></li>
+                        </ul>
+                        <p>
+                            <a href="https://project1.com">Publication Link</a> | <a href="https://project1.com">Poster Link</a>
+                        </p>
+                        <p>Technologies used: pyLDAvis, Jupyter Notebook, Git, Unsupervised Machine Learning</p>
+                    </div>
+                </article>
+                
             </div>
-        </article>
+        
+        </section>        
     </main>
+    
+    <footer>
+        <p>&copy; <em> 2025 Natasha Tran. All rights reserved. </em></p>
+    </footer>
 </body>
 </html>
